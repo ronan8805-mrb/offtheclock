@@ -1,0 +1,52 @@
+# dependencies
+node_modules/
+.npm/
+
+# build / deploy
+dist/
+.output/
+.vercel/
+.nitro/
+.tanstack/
+.vinxi/
+routeTree.gen.ts
+
+# env & secrets
+.env
+.env.*
+!.env.example
+
+# logs & caches
+*.log
+/tmp/
+.cache/
+.turbo/
+coverage/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# local DB / runtime
+*.db
+*.sqlite
+pglite-debug.log
+data/
+
+# agent artifacts (keep public assets)
+/screenshots/
+/artifacts/
+/tmp/
+
+# platform / agent workspace (not part of the product app)
+.grok/
+.project_id
+.node_modules.lock
+AGENTS.md
+attachments/
+artifacts/
+screenshots/
