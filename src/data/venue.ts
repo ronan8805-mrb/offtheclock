@@ -312,7 +312,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Can I bring my own food or drinks?",
-    a: "Outside alcohol is not permitted. You can order our treats and packages online, or ask the host on arrival for available options.",
+    a: "BYOB is permitted with a €6 per person corkage fee. Outside food is not permitted — there are plenty of vending machines and treats available from the food bar inside.",
   },
   {
     q: "How do I cancel or reschedule?",
