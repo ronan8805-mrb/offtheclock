@@ -46,3 +46,4 @@ pglite-debug.log
 .node_modules.lock
 AGENTS.md
 attachments/
+.push_payload.json
