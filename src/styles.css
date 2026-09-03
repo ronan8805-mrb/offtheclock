@@ -73,3 +73,16 @@
   html { scroll-behavior: auto; }
   .fade-up, .fade-in, .marquee-track { animation: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
 }
+
+.aurora {
+  background:
+    radial-gradient(900px circle at 18% 10%, rgb(200 245 66 / 0.14), transparent 42%),
+    radial-gradient(700px circle at 82% 0%, rgb(125 211 252 / 0.08), transparent 40%);
+}
+.grid-fade {
+  background-image:
+    linear-gradient(rgb(244 246 238 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(244 246 238 / 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+}
