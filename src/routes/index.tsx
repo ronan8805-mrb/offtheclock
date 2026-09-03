@@ -5,6 +5,7 @@ import { HOW_IT_WORKS, ROOMS, STUDIO } from "@/data/venue";
 import { RoomCard } from "@/components/room-card";
 import { Section, SectionHeader } from "@/components/section";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -69,15 +70,15 @@ export function HomePage() {
         <div className="pointer-events-none absolute inset-0 aurora" />
         <div className="pointer-events-none absolute inset-0 grid-fade opacity-40" />
         <div className="relative mx-auto flex min-h-[90dvh] max-w-6xl flex-col justify-center px-4 py-24 sm:px-6">
-          <p className="fade-up mb-5 text-xs font-medium uppercase tracking-[0.22em] text-fg-subtle">
+          <div className="fade-up mb-7">
+            <Logo className="h-10 sm:h-12 max-h-12" />
+          </div>
+          <p className="fade-up stagger-1 mb-5 text-xs font-medium uppercase tracking-[0.22em] text-fg-subtle">
             {STUDIO.location}
           </p>
-          <h1 className="fade-up stagger-1 max-w-4xl text-4xl font-semibold tracking-tight text-fg sm:text-6xl md:text-7xl">
-            Ronan Buckley
-          </h1>
-          <p className="fade-up stagger-2 mt-5 max-w-2xl text-xl text-fg-muted sm:text-2xl">
+          <h1 className="fade-up stagger-2 max-w-4xl text-4xl font-semibold tracking-tight text-fg sm:text-6xl md:text-7xl">
             I make <RoleCycle />.
-          </p>
+          </h1>
           <p className="fade-up stagger-3 mt-6 max-w-xl text-base leading-relaxed text-fg-muted">
             {STUDIO.subhead}
           </p>
