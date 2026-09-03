@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 
 const NAV = [
-  { to: "/rooms", label: "Rooms" },
-  { to: "/pricing", label: "Pricing" },
-  { to: "/treats", label: "Treats" },
-  { to: "/how-it-works", label: "How it works" },
+  { to: "/rooms", label: "Work" },
+  { to: "/pricing", label: "Services" },
+  { to: "/treats", label: "Lab" },
+  { to: "/how-it-works", label: "Process" },
   { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -21,27 +21,20 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 glass">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link
-          to="/"
-          className="flex shrink-0 items-center gap-2.5"
-          onClick={() => setOpen(false)}
-        >
-          <Logo className="h-7 sm:h-8" />
+        <Link to="/" className="flex shrink-0 items-center gap-2.5" onClick={() => setOpen(false)}>
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
           {NAV.map((item) => {
-            const active =
-              pathname === item.to || pathname.startsWith(item.to + "/");
+            const active = pathname === item.to || pathname.startsWith(item.to + "/");
             return (
               <Link
                 key={item.to}
                 to={item.to}
                 className={cn(
                   "rounded-full px-3.5 py-2 text-sm transition-colors duration-150",
-                  active
-                    ? "text-fg bg-surface"
-                    : "text-fg-muted hover:text-fg hover:bg-surface/60",
+                  active ? "text-fg bg-surface" : "text-fg-muted hover:text-fg hover:bg-surface/60",
                 )}
               >
                 {item.label}
@@ -53,7 +46,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Button asChild size="sm" className="hidden sm:inline-flex">
             <Link to="/book" search={{ fresh: "1" as const }}>
-              Book a Room
+              Start a brief
             </Link>
           </Button>
           <button
@@ -81,12 +74,8 @@ export function Header() {
               </Link>
             ))}
             <Button asChild className="mt-2 w-full">
-              <Link
-                to="/book"
-                search={{ fresh: "1" as const }}
-                onClick={() => setOpen(false)}
-              >
-                Book a Room
+              <Link to="/book" search={{ fresh: "1" as const }} onClick={() => setOpen(false)}>
+                Start a brief
               </Link>
             </Button>
           </nav>

@@ -38,91 +38,103 @@ export type Treat = {
   category: "drinks" | "food" | "extras";
 };
 
+export const STUDIO = {
+  name: "Ronan Buckley",
+  mark: "RB",
+  studio: "Off The Clock",
+  headline: "I make the thing you thought needed a whole team.",
+  subhead:
+    "Websites that feel illegal. Apps that actually get used. Campaigns that move people. Games that swallow weekends. Built by one Irish contractor who does not clock out.",
+  location: "Dublin-born · Spain-based · remote everywhere",
+  email: "hello@offtheclock247.com",
+};
+
 export const ROOMS: Room[] = [
   {
     id: "pool",
-    name: "Pool Room",
-    tagline: "Precision. Atmosphere. Competition.",
+    name: "Web & Product",
+    tagline: "Sites that stop the scroll.",
     description:
-      "A private billiards lounge wrapped in deep charcoal and electric blue light. Full-size pool table, leather seating, and a quiet bar corner — built for late-night games and group energy.",
+      "100+ websites designed and shipped for real clients — not templates with extra padding. Brand systems, conversion funnels, booking engines, and interfaces that feel like they cost ten times more than they did.",
     features: [
-      "Full-size professional pool table",
-      "Leather lounge seating for 10",
-      "Bluetooth audio system",
-      "Ambient blue cove lighting",
-      "Private mini-bar setup",
+      "Custom marketing and product sites",
+      "Design systems that scale",
+      "Conversion-first UX",
+      "Motion, atmosphere, and craft",
+      "Built around the exact brief — not a theme",
     ],
-    capacity: "Up to 10 guests",
+    capacity: "Startups · venues · personal brands",
     accent: "blue",
     image: "/rooms/pool.jpg",
     popular: true,
   },
   {
     id: "dj",
-    name: "DJ Room",
-    tagline: "Your night. Your set.",
+    name: "Apps & Platforms",
+    tagline: "Software that earns its keep.",
     description:
-      "A red-lit private booth with pro decks, thick velvet seating, and club-grade sound. Perfect for birthday parties, after-work drops, or friends who take the playlist seriously.",
+      "Customer analysis tools, employee management platforms, safety systems, and trading-grade applications. Shipped in the orbit of Revolut, Remote, and Chosanta LTD across Ireland, Spain, and the rest of Europe.",
     features: [
-      "Professional DJ decks & mixer",
-      "Club-quality sound system",
-      "Curved velvet lounge seating",
-      "Red atmospheric LED design",
-      "Smoke / haze atmosphere option",
+      "Customer analysis dashboards",
+      "Employee / ops management",
+      "Safety and compliance apps",
+      "Hedge-fund style trading tools",
+      "Full-stack product builds",
     ],
-    capacity: "Up to 12 guests",
+    capacity: "Operators who hate busywork",
     accent: "red",
     image: "/rooms/dj.jpg",
-  },
-  {
-    id: "karaoke",
-    name: "Karaoke Room",
-    tagline: "Private stage. Zero judgement.",
-    description:
-      "An intimate pink-lit karaoke suite with dual mics, a massive screen, and plush curved seating. Built for sing-alongs, birthday chaos, and nights that turn into legends.",
-    features: [
-      "Dual wireless microphones",
-      "Large HD karaoke display",
-      "Extensive song catalogue",
-      "Plush curved sofa lounge",
-      "Soft pink ambient lighting",
-    ],
-    capacity: "Up to 10 guests",
-    accent: "pink",
-    image: "/rooms/karaoke.jpg",
     popular: true,
   },
   {
-    id: "gaming",
-    name: "Gaming & Movie Room",
-    tagline: "Screens, simulators, pure escape.",
+    id: "karaoke",
+    name: "Marketing & Campaigns",
+    tagline: "Culture, not calendar filler.",
     description:
-      "Cinema-grade recliners, console gaming, a wall-size display, and a virtual golf simulator. Ideal for match nights, movie marathons, or friendly competition.",
+      "Campaigns and creative for people who already have an audience — including UK rapper Tunde and Irish boxer-influencer Ben Williams. Strategy, identity, content systems, and advertising that does not apologise for existing.",
     features: [
-      "4K OLED wall display",
-      "Latest consoles & controllers",
-      "Virtual golf simulator",
-      "Cinema recliners for 8",
-      "Green accent lighting design",
+      "Brand identity and positioning",
+      "Campaign concepts and rollout",
+      "Talent and personality marketing",
+      "Social, film, and stills direction",
+      "Irish wit, international polish",
     ],
-    capacity: "Up to 8 guests",
+    capacity: "Artists · athletes · ambitious brands",
+    accent: "pink",
+    image: "/rooms/karaoke.jpg",
+  },
+  {
+    id: "gaming",
+    name: "Games & Worlds",
+    tagline: "Dublin, but make it legendary.",
+    description:
+      "Currently building Irish Outlaws: Dublin Vendetta in Unreal Engine 5 — a less graphic, GTA-style open city set in Dublin city centre for a client I cannot name. The games market is massive. I am addicted. Come in.",
+    features: [
+      "Unreal Engine 5 production",
+      "Open-world Dublin setting",
+      "Narrative + systems design",
+      "Cinematic presentation",
+      "Studio partnership ready",
+    ],
+    capacity: "Studios · publishers · wild briefs",
     accent: "green",
     image: "/rooms/gaming.jpg",
+    popular: true,
   },
   {
     id: "vip",
-    name: "VIP Chill Room",
-    tagline: "Low lights. High standards.",
+    name: "AI & Systems",
+    tagline: "Models, machines, leverage.",
     description:
-      "Our most exclusive suite — amber glow, modular lounges, soft rugs, and a champagne-ready table. Designed for private conversations, celebrations, and unhurried nights.",
+      "I train LLMs on my own supercomputer — RTX 5090 in the rack — and wire intelligence into products. Analysis apps, automation, custom models, and the unglamorous glue that makes a company feel ten people bigger.",
     features: [
-      "Premium modular lounge layout",
-      "Warm amber lighting design",
-      "Champagne service setup",
-      "Private entrance access",
-      "Dedicated host on request",
+      "Custom LLM training and fine-tunes",
+      "Internal tools with real brains",
+      "Automation that replaces busywork",
+      "Data products and customer insight",
+      "Hardware-to-product pipeline",
     ],
-    capacity: "Up to 8 guests",
+    capacity: "Founders who want an unfair edge",
     accent: "amber",
     image: "/rooms/vip.jpg",
   },
@@ -130,229 +142,125 @@ export const ROOMS: Room[] = [
 
 export const ROOM_PRICING: Record<string, PricingTier> = {
   pool: {
-    standard: { 1: 60, 2: 100, 3: 135 },
-    peak: { 1: 80, 2: 140, 3: 190 },
+    standard: { 1: 2400, 2: 4200, 3: 5800 },
+    peak: { 1: 3200, 2: 5600, 3: 7800 },
   },
   dj: {
-    standard: { 1: 75, 2: 130, 3: 175 },
-    peak: { 1: 100, 2: 175, 3: 240 },
+    standard: { 1: 3800, 2: 6800, 3: 9400 },
+    peak: { 1: 5200, 2: 9200, 3: 12800 },
   },
   karaoke: {
-    standard: { 1: 65, 2: 110, 3: 150 },
-    peak: { 1: 85, 2: 150, 3: 205 },
+    standard: { 1: 1800, 2: 3200, 3: 4400 },
+    peak: { 1: 2600, 2: 4600, 3: 6400 },
   },
   gaming: {
-    standard: { 1: 70, 2: 120, 3: 160 },
-    peak: { 1: 95, 2: 165, 3: 220 },
+    standard: { 1: 4500, 2: 8200, 3: 11400 },
+    peak: { 1: 6200, 2: 11200, 3: 15600 },
   },
   vip: {
-    standard: { 1: 90, 2: 155, 3: 210 },
-    peak: { 1: 120, 2: 210, 3: 285 },
+    standard: { 1: 3000, 2: 5400, 3: 7600 },
+    peak: { 1: 4200, 2: 7600, 3: 10800 },
   },
 };
 
 export const PACKAGES: Package[] = [
   {
-    id: "love-island",
-    name: "Love Island Special",
-    description: "Date-night energy with shareable treats and a toast.",
-    price: 45,
+    id: "site-sprint",
+    name: "Site Sprint",
+    description: "A flagship website in weeks, not quarters.",
+    price: 4800,
     includes: [
-      "Bottle of prosecco",
-      "Two signature milkshakes",
-      "Sharing sweet platter",
-      "Mood lighting request",
+      "Strategy + sitemap",
+      "Custom design system",
+      "Build, motion, launch",
+      "Analytics and handover",
     ],
     highlight: true,
   },
   {
-    id: "girls-night",
-    name: "Girls Night In",
-    description: "The full group treatment — snacks, sips, and vibes.",
-    price: 85,
+    id: "product-build",
+    name: "Product Build",
+    description: "An app or internal platform that staff actually open.",
+    price: 12000,
     includes: [
-      "Two large milkshakes",
-      "Chicken fillet roll mega deal (x2)",
-      "Loaded nachos",
-      "Selection of soft drinks",
+      "Discovery and architecture",
+      "Design + engineering",
+      "Auth, data, dashboards",
+      "Deploy and training",
     ],
     highlight: true,
   },
   {
-    id: "vip-indulgence",
-    name: "VIP Indulgence",
-    description: "For birthdays and big nights that deserve more.",
-    price: 120,
+    id: "campaign-drop",
+    name: "Campaign Drop",
+    description: "A launch that feels like culture, not a LinkedIn post.",
+    price: 3500,
     includes: [
-      "Champagne bottle",
-      "Premium grazing board",
-      "Four signature drinks",
-      "Personalised welcome note",
+      "Positioning and concept",
+      "Visual identity pack",
+      "Content system",
+      "Rollout plan",
     ],
     highlight: true,
   },
   {
-    id: "game-night",
-    name: "Game Night Fuel",
-    description: "Sustained energy for long sessions.",
-    price: 55,
+    id: "world-proto",
+    name: "World Prototype",
+    description: "UE5 vertical slice — proof you can fund the rest.",
+    price: 18000,
     includes: [
-      "Two mega meal deals",
-      "Sharing fries",
-      "Soft drink selection",
-      "Chocolate brownie bites",
+      "Look-dev and blockout",
+      "Player loop",
+      "Cinematic moment",
+      "Playable build",
     ],
   },
   {
-    id: "after-hours",
-    name: "After Hours",
-    description: "Late session essentials, no fuss.",
-    price: 40,
+    id: "always-on",
+    name: "Always On",
+    description: "A contractor who treats your product like it is his.",
+    price: 6500,
     includes: [
-      "Four soft drinks",
-      "Loaded fries",
-      "Mixed sweet selection",
+      "Retainer days each month",
+      "Priority queue",
+      "Design + code + campaigns",
+      "No agency telephone game",
     ],
   },
 ];
 
 export const TREATS: Treat[] = [
-  {
-    id: "oreo-shake",
-    name: "Large Oreo Milkshake",
-    description: "Thick, cold, unapologetically extra.",
-    price: 8,
-    category: "drinks",
-  },
-  {
-    id: "strawberry-shake",
-    name: "Strawberry Cream Shake",
-    description: "Classic pink-tier indulgence.",
-    price: 8,
-    category: "drinks",
-  },
-  {
-    id: "fillet-mega",
-    name: "Chicken Fillet Roll Mega Meal Deal",
-    description: "Roll, fries, and a drink — sorted.",
-    price: 14,
-    category: "food",
-  },
-  {
-    id: "loaded-nachos",
-    name: "Loaded Nachos",
-    description: "Cheese, salsa, jalapeños, the works.",
-    price: 12,
-    category: "food",
-  },
-  {
-    id: "fries",
-    name: "Truffle Fries",
-    description: "Crispy, herbed, shareable.",
-    price: 7,
-    category: "food",
-  },
-  {
-    id: "brownie",
-    name: "Warm Brownie Bites",
-    description: "With salted caramel drizzle.",
-    price: 9,
-    category: "food",
-  },
-  {
-    id: "prosecco",
-    name: "Bottle of Prosecco",
-    description: "Chilled and ready to pour.",
-    price: 28,
-    category: "drinks",
-  },
-  {
-    id: "soft-pack",
-    name: "Soft Drink Selection (x4)",
-    description: "Mix of classics for the table.",
-    price: 10,
-    category: "drinks",
-  },
-  {
-    id: "grazing",
-    name: "Premium Grazing Board",
-    description: "Cured meats, cheese, fruit, crackers.",
-    price: 36,
-    category: "food",
-  },
+  { id: "ts", name: "TypeScript / React", description: "The daily driver for product and web.", price: 0, category: "drinks" },
+  { id: "ue5", name: "Unreal Engine 5", description: "Irish Outlaws and the worlds after it.", price: 0, category: "drinks" },
+  { id: "python", name: "Python / ML", description: "Models, analysis, training loops.", price: 0, category: "drinks" },
+  { id: "design", name: "Graphic design", description: "Identity, advertising, stills, motion direction.", price: 0, category: "food" },
+  { id: "ads", name: "Advertising", description: "Campaigns for talent and brands that already have heat.", price: 0, category: "food" },
+  { id: "full-stack", name: "Full-stack platforms", description: "From schema to the button the CEO slams.", price: 0, category: "food" },
+  { id: "llm", name: "LLM training", description: "Fine-tunes on my own RTX 5090 rig.", price: 0, category: "extras" },
+  { id: "ops", name: "Ops & safety systems", description: "Chosanta LTD — Ireland, Spain, Europe.", price: 0, category: "extras" },
+  { id: "trading", name: "Trading systems", description: "Hedge-fund grade tooling, no theatre.", price: 0, category: "extras" },
 ];
 
 export const TIME_SLOTS = [
-  "12:00",
-  "13:00",
-  "14:00",
-  "15:00",
-  "16:00",
-  "17:00",
-  "18:00",
-  "19:00",
-  "20:00",
-  "21:00",
-  "22:00",
-  "23:00",
+  "09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00",
 ];
 
 export const FAQ_ITEMS = [
-  {
-    q: "Do I need to be 18 to book?",
-    a: "Yes. Off The Clock is an 18+ private social venue. Age verification is required on entry.",
-  },
-  {
-    q: "How many people can I bring?",
-    a: "Each room has a listed capacity (typically 8–12). If you need more space, contact us about combining rooms.",
-  },
-  {
-    q: "What's the difference between Standard and Peak?",
-    a: "Peak rates apply Friday–Sunday evenings from 18:00, plus bank holidays. All other times are Standard.",
-  },
-  {
-    q: "Can I bring my own food or drinks?",
-    a: "BYOB is permitted with a €6 per person corkage fee. Outside food is not permitted — there are plenty of vending machines and treats available from the food bar inside.",
-  },
-  {
-    q: "How do I cancel or reschedule?",
-    a: "Cancellations 24+ hours ahead receive a full credit. Inside 24 hours, room fees are non-refundable; packages may be rescheduled once.",
-  },
-  {
-    q: "Is parking available?",
-    a: "Street parking and nearby multi-storey options are available. We'll share directions in your confirmation.",
-  },
-  {
-    q: "Can I host a birthday or private event?",
-    a: "Absolutely. Book online, then message us with any special requests — balloons, music cues, or VIP upgrades.",
-  },
-  {
-    q: "What should I wear?",
-    a: "Smart casual. Comfortable enough for the room you've booked — no formal dress code, just good energy.",
-  },
+  { q: "Who is this actually for?", a: "Founders, operators, artists, and studios who want one person who can design it, build it, market it, and not disappear after the invoice. If you need a 40-person deck first, I am the wrong room." },
+  { q: "Where are you based?", a: "Dublin-born. Lived in Canada, the USA, Mexico, and now Spain. Work lands everywhere. Timezones are a suggestion; delivery is not." },
+  { q: "Have you shipped real products or just pretty sites?", a: "Both, on purpose. 100+ websites. Customer analysis and employee platforms around Revolut and Remote. Safety apps for Chosanta LTD across Ireland and Europe. Trading tools at hedge-fund intensity. Campaigns for Tunde and Ben Williams. And a UE5 Dublin open-world in production." },
+  { q: "Do you take small jobs or only moonshots?", a: "I take work that deserves to exist. A tight site for a serious operator can be more interesting than a bloated app. If the brief is lazy, I will say so." },
+  { q: "How do projects start?", a: "Send the brief. I reply fast. We lock scope, timeline, and a number. Then I go over and beyond — contractor habit, not a slogan." },
+  { q: "Can you join an existing team?", a: "Yes. I have always been self-employed. Drop me into design, engineering, campaigns, or the ugly glue between them." },
+  { q: "What is Irish Outlaws?", a: "Irish Outlaws: Dublin Vendetta is an Unreal Engine 5 game set in Dublin city centre. Think GTA energy with less graphic excess. Built for a major client I cannot name yet. The gaming market is enormous. I am all in." },
+  { q: "How do we pay / what are rates?", a: "Project fees or a monthly always-on retainer. Indicative starting points live on the Services page. Serious briefs get a precise quote, not a menu surprise." },
 ];
 
 export const HOW_IT_WORKS = [
-  {
-    step: "01",
-    title: "Choose your room",
-    body: "Pool, DJ, Karaoke, Gaming & Movie, or VIP Chill — each with its own atmosphere and capacity.",
-  },
-  {
-    step: "02",
-    title: "Pick a time",
-    body: "Select date, start time, and duration. Peak and Standard rates are calculated automatically.",
-  },
-  {
-    step: "03",
-    title: "Add treats",
-    body: "Optional packages and individual treats — milkshakes, meal deals, champagne, grazing boards.",
-  },
-  {
-    step: "04",
-    title: "Arrive & unwind",
-    body: "Check in, settle in, and enjoy a private space built entirely around your group.",
-  },
+  { step: "01", title: "Tell me the unreasonably good version", body: "Not the safe brief. The one you would build if you trusted the person on the other side. I will tell you what is real in a week versus a quarter." },
+  { step: "02", title: "I design the attack", body: "Scope, stack, look, and the first thing the user feels. No 40-slide archaeology. A plan you can smell." },
+  { step: "03", title: "Build in public-to-you", body: "Tight loops. Working software, working campaigns, working worlds. You see progress, not status theatre." },
+  { step: "04", title: "Ship, then keep the knife sharp", body: "Launch is the start. I stay on as the contractor who actually answers, or I hand you a system you can run without me." },
 ];
 
 export function getRoom(id: string): Room | undefined {
@@ -369,7 +277,7 @@ export function isPeakTime(dateIso: string, time: string): boolean {
   if (!dateIso || !time) return false;
   const d = new Date(dateIso + "T12:00:00");
   if (Number.isNaN(d.getTime())) return false;
-  const day = d.getDay(); // 0 Sun … 6 Sat
+  const day = d.getDay();
   const hour = parseInt(time.split(":")[0] ?? "0", 10);
   const isWeekend = day === 0 || day === 5 || day === 6;
   return isWeekend && hour >= 18;
@@ -393,39 +301,9 @@ export const ACCENT_CLASSES: Record<
   RoomAccent,
   { text: string; bg: string; border: string; glow: string; solid: string }
 > = {
-  blue: {
-    text: "text-room-blue",
-    bg: "bg-room-blue/10",
-    border: "border-room-blue/30",
-    glow: "room-glow-blue",
-    solid: "bg-room-blue",
-  },
-  red: {
-    text: "text-room-red",
-    bg: "bg-room-red/10",
-    border: "border-room-red/30",
-    glow: "room-glow-red",
-    solid: "bg-room-red",
-  },
-  pink: {
-    text: "text-room-pink",
-    bg: "bg-room-pink/10",
-    border: "border-room-pink/30",
-    glow: "room-glow-pink",
-    solid: "bg-room-pink",
-  },
-  green: {
-    text: "text-room-green",
-    bg: "bg-room-green/10",
-    border: "border-room-green/30",
-    glow: "room-glow-green",
-    solid: "bg-room-green",
-  },
-  amber: {
-    text: "text-room-amber",
-    bg: "bg-room-amber/10",
-    border: "border-room-amber/30",
-    glow: "room-glow-amber",
-    solid: "bg-room-amber",
-  },
+  blue: { text: "text-room-blue", bg: "bg-room-blue/10", border: "border-room-blue/30", glow: "room-glow-blue", solid: "bg-room-blue" },
+  red: { text: "text-room-red", bg: "bg-room-red/10", border: "border-room-red/30", glow: "room-glow-red", solid: "bg-room-red" },
+  pink: { text: "text-room-pink", bg: "bg-room-pink/10", border: "border-room-pink/30", glow: "room-glow-pink", solid: "bg-room-pink" },
+  green: { text: "text-room-green", bg: "bg-room-green/10", border: "border-room-green/30", glow: "room-glow-green", solid: "bg-room-green" },
+  amber: { text: "text-room-amber", bg: "bg-room-amber/10", border: "border-room-amber/30", glow: "room-glow-amber", solid: "bg-room-amber" },
 };

@@ -1,43 +1,37 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ROOMS } from "@/data/venue";
-import { RoomCard } from "@/components/room-card";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { Section, SectionHeader } from "@/components/section";
-import { Button } from "@/components/ui/button";
+import { WORK } from "@/data/studio";
 
 export const Route = createFileRoute("/rooms/")({
-  component: RoomsPage,
+  component: WorkPage,
 });
 
-function RoomsPage() {
+function WorkPage() {
   return (
-    <>
-      <Section className="pt-12 sm:pt-16">
-        <SectionHeader
-          eyebrow="Rooms"
-          title="Pick your atmosphere"
-          description="Five private spaces, each designed for a different energy — from competitive pool nights to VIP champagne lounges."
-        />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {ROOMS.map((room, i) => (
-            <RoomCard key={room.id} room={room} index={i} />
-          ))}
-        </div>
-      </Section>
-      <Section className="pt-0">
-        <div className="flex flex-col items-start justify-between gap-4 rounded-2xl border border-border bg-surface p-6 sm:flex-row sm:items-center sm:p-8">
-          <div>
-            <h3 className="text-lg font-semibold text-fg">
-              Not sure which room?
-            </h3>
-            <p className="mt-1 text-sm text-fg-muted">
-              Start a booking and switch rooms anytime before payment.
-            </p>
-          </div>
-          <Button asChild>
-            <Link to="/book">Start booking</Link>
-          </Button>
-        </div>
-      </Section>
-    </>
+    <Section className="pt-12 sm:pt-16">
+      <SectionHeader
+        eyebrow="Work"
+        title="Selected work"
+        description="Apps, campaigns, sites, and a game world currently in production."
+      />
+      <div className="grid gap-4 md:grid-cols-2">
+        {WORK.map((item) => (
+          <Link
+            key={item.id}
+            to="/rooms/$roomId"
+            params={{ roomId: item.id }}
+            className="rounded-2xl border border-border bg-surface p-6 transition-transform hover:-translate-y-0.5 hover:border-lime/25"
+          >
+            <div className="flex items-center justify-between text-xs uppercase tracking-widest text-fg-subtle">
+              <span>{item.client}</span>
+              <span>{item.year}</span>
+            </div>
+            <p className="mt-2 text-xs text-lime">{item.meta}</p>
+            <h3 className="mt-2 font-display text-2xl">{item.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-fg-muted">{item.body}</p>
+          </Link>
+        ))}
+      </div>
+    </Section>
   );
 }
